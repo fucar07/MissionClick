@@ -28,6 +28,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.AJAX.Acts.RequestFile,
+		C3.Plugins.System.Acts.Wait,
 		C3.Behaviors.Timer.Acts.StartTimer,
 		C3.Plugins.AJAX.Cnds.OnComplete,
 		C3.Plugins.Arr.Acts.JSONLoad,
@@ -51,7 +52,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Text.Acts.SetPos,
 		C3.Plugins.Sprite.Exps.Y,
-		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Arr.Exps.At,
 		C3.Plugins.Arr.Exps.Back,
 		C3.Plugins.Text.Acts.TypewriterText,
@@ -63,19 +63,19 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.Sprite.Exps.AnimationFrameTag,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Plugins.System.Acts.AddVar,
 		C3.Behaviors.Flash.Acts.Flash,
 		C3.Plugins.Arr.Acts.Pop,
 		C3.Behaviors.Timer.Cnds.OnTimer,
-		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.Mouse.Cnds.IsOverObject,
 		C3.Plugins.Mouse.Acts.SetCursor,
+		C3.Behaviors.Tween.Acts.TweenTwoProperties,
 		C3.Plugins.Browser.Cnds.IsFullscreen,
 		C3.Plugins.Browser.Acts.CancelFullScreen,
 		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.Browser.Acts.RequestFullScreen,
 		C3.Plugins.Audio.Acts.SetPaused,
 		C3.Plugins.System.Cnds.EveryTick,
-		C3.Behaviors.Tween.Acts.TweenTwoProperties,
 		C3.Plugins.Audio.Acts.Stop
 	];
 };
@@ -119,11 +119,13 @@ self.C3_JsPropNameTable = [
 	{soruCumle: 0},
 	{cevap: 0},
 	{bitisSure: 0},
+	{kalanSoru: 0},
 	{ButonAilesi: 0},
 	{AnaSayfaGorseller: 0},
 	{tiklanabilir: 0},
 	{sure: 0},
 	{secilenCumle: 0},
+	{sayac: 0},
 	{musicDurum: 0}
 ];
 
@@ -161,6 +163,7 @@ self.InstanceType = {
 	soruCumle: class extends self.ITextInstance {},
 	cevap: class extends self.ITextInstance {},
 	bitisSure: class extends self.ITextInstance {},
+	kalanSoru: class extends self.ITextInstance {},
 	ButonAilesi: class extends self.ISpriteInstance {},
 	AnaSayfaGorseller: class extends self.ISpriteInstance {}
 }

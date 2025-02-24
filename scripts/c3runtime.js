@@ -1410,8 +1410,9 @@ self.C3_ExpressionFuncs = [
 		() => -10,
 		() => 0,
 		() => "Başlangıç",
-		() => "kelimeler",
 		() => 1,
+		() => "kelimeler",
+		() => 2,
 		() => "sure",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -1430,7 +1431,6 @@ self.C3_ExpressionFuncs = [
 		},
 		() => 30,
 		() => 1200,
-		() => 2,
 		() => 0.1,
 		p => {
 			const n0 = p._GetNode(0);
@@ -1447,6 +1447,10 @@ self.C3_ExpressionFuncs = [
 			const n1 = p._GetNode(1);
 			return () => n0.ExpObject(1, n1.ExpObject());
 		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and(v0.GetValue(), " / 10");
+		},
 		() => 822,
 		p => {
 			const n0 = p._GetNode(0);
@@ -1454,6 +1458,8 @@ self.C3_ExpressionFuncs = [
 		},
 		() => 0.2,
 		() => -100,
+		() => 1.1,
+		() => 0.5,
 		() => "Animation 1",
 		() => "Animation 2",
 		() => 960,
@@ -1461,8 +1467,6 @@ self.C3_ExpressionFuncs = [
 		() => 1920,
 		() => 1080,
 		() => 1.5,
-		() => 1.1,
-		() => 0.5,
 		() => "bitis",
 		() => 14
 ];
